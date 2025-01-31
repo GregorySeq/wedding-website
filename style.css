@@ -1,67 +1,175 @@
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
   color: #333;
+  background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
 }
 
-header {
-  background-color: #ffcccb;
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.cta-button {
+  background: #ff6f61;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #ff4a3d;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  font-size: 2rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Story Section */
+.story {
+  padding: 100px 0;
+  background: white;
+  text-align: center;
+}
+
+.story h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.story p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Events Section */
+.events {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #ffcccb, #ff6f61);
+  color: white;
+}
+
+.events h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.event-card h3 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.event-card p {
+  font-size: 1.1rem;
+}
+
+/* RSVP Section */
+.rsvp {
+  padding: 100px 0;
+  background: white;
+  text-align: center;
+}
+
+.rsvp h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.rsvp-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.rsvp-form button {
+  background: #ff6f61;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.rsvp-form button:hover {
+  background: #ff4a3d;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
   text-align: center;
   padding: 20px 0;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 3em;
-}
-
-header p {
-  margin: 0;
-  font-size: 1.2em;
-}
-
-nav {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-section {
-  padding: 20px;
-  margin: 20px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  color: #ff6f61;
-}
-
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #333;
-  color: white;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
