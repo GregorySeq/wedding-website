@@ -173,3 +173,14 @@ footer {
   text-align: center;
   padding: 20px 0;
 }
+
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
